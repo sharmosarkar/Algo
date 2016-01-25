@@ -12,24 +12,6 @@ public class LinkedList {
      */
     
     //public static Node head;
-        
-    public static void main(String[] args) {
-        
-        //head = new Node(0,null); 
-        /*
-        Node h = null;
-        System.out.println("Starting !! ");
-        LinkedList obj = new LinkedList();
-        h =obj.addElement(10,h); 
-        h = obj.addElement(20,h);
-        h = obj.addElement(30,h);
-        h = obj.addElement(40,h);
-        h = obj.addElement(50,h);
-        // Printing the list created
-        obj.printList(h);*/
-        AlgoAssgn1 obj = new AlgoAssgn1();
-        obj.make2LinkedLists();
-    }
     
     public void printList (Node h){
         //System.out.println("inside print element");

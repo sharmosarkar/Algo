@@ -14,6 +14,11 @@ public class AlgoAssgn1 {
     Node headA = null;
     Node headB = null;
     
+    public static void main (String args[]){
+        AlgoAssgn1 obj = new AlgoAssgn1();
+        obj.make2LinkedLists();
+    }
+    
     public void make2LinkedLists(){
         LinkedList obj = new LinkedList();
         headA = obj.addElement(10, headA);
@@ -25,9 +30,25 @@ public class AlgoAssgn1 {
         headB = obj.addElement(18, headB);
         headB = obj.addElement(82, headB);
         headB = obj.addElement(23, headB);
-        headB = obj.addElement(15, headB);
-        headB = obj.addElement(8, headB);
         
+        // Traversing LisnkedList A till we reach the merging point
+        Node pointerA = headA , pointerB = headB;
+        int counter = 1;
+        while (counter<3){
+            counter++;
+            pointerA = pointerA.next;
+        }
+        
+        // Trversing till the end of LinkedList B
+        while(pointerB.next!=null){
+            pointerB = pointerB.next;
+        }
+        
+        // Here LinkedList B is being pointed to the intersection point
+        // Both linkd list B and A now point to common elements {15,8}.
+        // Thus the required merging point is 15.
+        pointerB.next = pointerA;       
+  
         obj.printList(headA);
         obj.printList(headB);   
         firstCommonEle();
